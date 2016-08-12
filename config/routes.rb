@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  root to: 'pages#home'
+
+  get 'pages/home'
+
   get 'questions/1'
 
   get 'questions/2'
