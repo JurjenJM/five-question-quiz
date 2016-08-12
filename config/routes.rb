@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'rankings/score'
+
   root to: 'pages#home'
 
   get 'pages/home'
