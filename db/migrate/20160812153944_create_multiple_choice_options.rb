@@ -1,6 +1,6 @@
-class CreateMultipleChoices < ActiveRecord::Migration
+class CreateMultipleChoiceOptions < ActiveRecord::Migration
   def change
-    create_table :multiple_choices do |t|
+    create_table :multiple_choice_options do |t|
       t.string :option_a
       t.string :option_b
       t.string :option_c
