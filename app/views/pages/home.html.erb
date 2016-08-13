@@ -1,12 +1,22 @@
-<h1>Welcome to the 50 Seconds Quiz!</h1>
+<h1>Welkom bij de Zonnige Quiz!</h1>
 <p>
-  In the 50 Seconds Quiz we like to keep things simple.
-  All you need te remember is you will get:
-  - 50 seconds
-  - 5 questions
-  - Which means 10 seconds per question
+  In de Zonnige Quiz houden we het graag simpel.
+  Alles wat je moet weten is dat:
+  <ul>
+    <li>De quiz bestaat uit 5 multiple choice vragen</li>
+    <li>Je 10 seconden per vraag hebt om te antwoorden</li>
+  </ul>
 </p>
 
-<p>Your nickname:</p>
+<p>Jouw nickname:</p>
+
+
+<%= simple_form_for(@game) do |f| %>
+  <%= f.input :nickname %>
+  <%= f.submit %>
+<% end %>
+
+
 
 <button type="button" class="btn btn-primary">Start quiz</button>
+
