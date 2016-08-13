@@ -8,45 +8,39 @@
   </ul>
 </p>
 
-<p>Jouw nickname:</p>
+<%= form_for(@game) do |f| %>
+  <p>Jouw nickname:</p>
+  <%= f.text_field :nickname %>
 
 <button type="button" class="btn btn-primary">Start quiz</button>
 
-<h4>1) How many people currently (2016) live on the earth?</h4>
-<ol type="A">
-  <li>5,4 billion</li>
-  <li>6,4 billion</li>
-  <li>7,4 billion</li>
-</ol>
+<h4>1) How many people currently (2016) live on earth?</h4>
+  <p><%= f.radio_button :q1_points, 0 %> 5,4 billion</p>
+  <p><%= f.radio_button :q1_points, 0 %> 6,4 billion</p>
+  <p><%= f.radio_button :q1_points, 20 %> 7,4 billion</p>
 
 <h4>2) Who got into space first?</h4>
-<ol type="A">
-  <li>Neil Armstrong</li>
-  <li>Laika (the dog)</li>
-  <li>Albert (the monkey)</li>
-</ol>
+  <p><%= f.radio_button :q2_points, 0 %> Neil Armstrong</p>
+  <p><%= f.radio_button :q2_points, 0 %> Laika (the dog)</p>
+  <p><%= f.radio_button :q2_points, 20 %> Albert (the monkey)</p>
 
 <h4>3) Testvraag</h4>
-<ol type="A">
-  <li>Antwoord 1</li>
-  <li>Antwoord 2</li>
-  <li>Antwoord 3</li>
-</ol>
+  <p><%= f.radio_button :q3_points, 0 %> Antwoord 1</p>
+  <p><%= f.radio_button :q3_points, 0 %> Antwoord 2</p>
+  <p><%= f.radio_button :q3_points, 20 %> Antwoord 3</p>
 
 <h4>4) Testvraag</h4>
-<ol type="A">
-  <li>Antwoord 1</li>
-  <li>Antwoord 2</li>
-  <li>Antwoord 3</li>
-</ol>
+  <p><%= f.radio_button :q4_points, 0 %> Antwoord 1</p>
+  <p><%= f.radio_button :q4_points, 0 %> Antwoord 2</p>
+  <p><%= f.radio_button :q4_points, 20 %> Antwoord 3</p>
 
 <h4>5) Testvraag</h4>
-<ol type="A">
-  <li>Antwoord 1</li>
-  <li>Antwoord 2</li>
-  <li>Antwoord 3</li>
-</ol>
+  <p><%= f.radio_button :q5_points, 0 %> Antwoord 1</p>
+  <p><%= f.radio_button :q5_points, 0 %> Antwoord 2</p>
+  <p><%= f.radio_button :q5_points, 20 %> Antwoord 3</p>
 
+  <%= f.submit %>
+<% end %>
+
+<h2>...</h2>
 <h2>Time's Up!</h2>
-
-<button type="button" class="btn btn-primary">Checkout score</button>
