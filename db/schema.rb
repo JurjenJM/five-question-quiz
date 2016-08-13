@@ -11,38 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160812154644) do
-
-  create_table "games", force: :cascade do |t|
-    t.string   "nickname"
-    t.integer  "score"
-    t.boolean  "q1_correct"
-    t.boolean  "q2_correct"
-    t.boolean  "q3_correct"
-    t.boolean  "q4_correct"
-    t.boolean  "q5_correct"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "multiple_choice_options", force: :cascade do |t|
-    t.string   "option_a"
-    t.string   "option_b"
-    t.string   "option_c"
-    t.boolean  "option_a_correct"
-    t.boolean  "option_b_correct"
-    t.boolean  "option_c_correct"
-    t.integer  "question_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-  end
-
-  add_index "multiple_choice_options", ["question_id"], name: "index_multiple_choice_options_on_question_id"
-
-  create_table "questions", force: :cascade do |t|
-    t.string   "question"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
