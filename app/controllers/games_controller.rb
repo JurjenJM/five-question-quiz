@@ -1,6 +1,8 @@
 class GamesController < ApplicationController
 
   def index
+    @all_games = Game.all.order('score DESC')
+    @last_game = Game.last
   end
 
   def show
