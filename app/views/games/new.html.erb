@@ -1,15 +1,18 @@
 <div class="welcome">
-  <h1>Welkom bij de Zonnige Quiz!</h1>
-  <p>
-    In de Zonnige Quiz houden we het graag simpel.
-    Alles wat je moet weten is dat:
-    <ul>
-      <li>De quiz bestaat uit 5 multiple choice vragen</li>
-      <li>Je hebt 10 seconden per vraag hebt om te antwoorden</li>
-    </ul>
-  </p>
-
   <div class="centered">
+    <h1>Welkom bij de Zonnige Quiz!</h1>
+    <p>
+      In de Zonnige Quiz houden we het graag simpel.
+      Alles wat je moet weten is:
+    </div>
+    <div class="padded-left">
+      <ul>
+        <li>De quiz bestaat uit 5 multiple choice vragen</li>
+        <li>Je hebt 10 seconden per vraag hebt om te antwoorden</li>
+      </ul>
+    </div>
+
+  <div class="centered nickname">
     <%= form_for(@game) do |f| %>
       <p>Jouw nickname:</p>
       <%= f.text_field :nickname %>
@@ -51,7 +54,7 @@
 
 </div>
 
-<div class="question-3">
+<div class="question-3 padded-right">
 
   <h4>3) De oudste boom ter wereld, een Noorse spar, staat in Zweden. Hoe oud is deze boom?</h4>
   <p><%= f.radio_button :q3_points, 0 %> 95 jaar oud</p>
@@ -66,7 +69,7 @@
 
 </div>
 
-<div class="question-4">
+<div class="question-4 padded-right">
 
   <h4>4) Robert Pershing Wadlow (1918-1940), een Amerikaan, was de langste mens ooit volgens het Guinness Book of Records. Hoe lang was hij?</h4>
   <p><%= f.radio_button :q4_points, 0 %> 232cm</p>
