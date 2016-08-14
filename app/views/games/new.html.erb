@@ -100,8 +100,10 @@
 </div>
 
 <div class="submit centered">
-  <h2>Time's Up!</h2>
-    <%= f.submit %>
+  <div class="times-up-padding">
+    <h2>Time's Up!</h2>
+  </div>
+  <%= f.submit "Check score", class: 'btn btn-success' %>
   <% end %>
 </div>
 
