@@ -9,12 +9,14 @@
     </ul>
   </p>
 
-  <%= form_for(@game) do |f| %>
-    <p>Jouw nickname:</p>
-    <%= f.text_field :nickname %>
+  <div class="centered">
+    <%= form_for(@game) do |f| %>
+      <p>Jouw nickname:</p>
+      <%= f.text_field :nickname %>
 
-  <div class="start-quiz">
-    <button type="button" class="btn btn-success">Start quiz</button>
+    <div class="start-quiz">
+      <button type="button" class="btn btn-success">Start quiz</button>
+    </div>
   </div>
 </div>
 
