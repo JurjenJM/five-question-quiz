@@ -1,6 +1,18 @@
 <h4 class="centered individual-score">
-  <%= @last_game.nickname %>, jouw score is: <%= @last_game.score %> punten!
+  <%= @last_game.nickname %>, je hebt <%= @last_game.score %>% van de vragen goed beantwoord!
 </h4>
+
+<div class="centered">
+  <table class="score-details">
+    <tr>
+      <td class="<%= @q1_result %>">Vraag 1</td>
+      <td class="<%= @q2_result %>">Vraag 2</td>
+      <td class="<%= @q3_result %>">Vraag 3</td>
+      <td class="<%= @q4_result %>">Vraag 4</td>
+      <td class="<%= @q5_result %>">Vraag 5</td>
+    </tr>
+  </table>
+</div>
 
 <h6 class="title-padded"><i>All-time rankings</i></h6>
 <table class="table-rankings">

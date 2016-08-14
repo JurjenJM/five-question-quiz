@@ -3,6 +3,36 @@ class GamesController < ApplicationController
   def index
     @all_games = Game.all.order('score DESC')
     @last_game = Game.last
+
+    if Game.last.q1_points == 20
+      @q1_result = "green"
+    else
+      @q1_result = "red"
+    end
+
+    if Game.last.q2_points == 20
+      @q2_result = "green"
+    else
+      @q2_result = "red"
+    end
+
+    if Game.last.q3_points == 20
+      @q3_result = "green"
+    else
+      @q3_result = "red"
+    end
+
+    if Game.last.q4_points == 20
+      @q4_result = "green"
+    else
+      @q4_result = "red"
+    end
+
+    if Game.last.q5_points == 20
+      @q5_result = "green"
+    else
+      @q5_result = "red"
+    end
   end
 
   def show
