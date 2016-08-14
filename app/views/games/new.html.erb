@@ -1,46 +1,61 @@
-<h1>Welkom bij de Zonnige Quiz!</h1>
-<p>
-  In de Zonnige Quiz houden we het graag simpel.
-  Alles wat je moet weten is dat:
-  <ul>
-    <li>De quiz bestaat uit 5 multiple choice vragen</li>
-    <li>Je hebt 10 seconden per vraag hebt om te antwoorden</li>
-  </ul>
-</p>
+<div class="welcome">
+  <h1>Welkom bij de Zonnige Quiz!</h1>
+  <p>
+    In de Zonnige Quiz houden we het graag simpel.
+    Alles wat je moet weten is dat:
+    <ul>
+      <li>De quiz bestaat uit 5 multiple choice vragen</li>
+      <li>Je hebt 10 seconden per vraag hebt om te antwoorden</li>
+    </ul>
+  </p>
 
-<%= form_for(@game) do |f| %>
-  <p>Jouw nickname:</p>
-  <%= f.text_field :nickname %>
+  <%= form_for(@game) do |f| %>
+    <p>Jouw nickname:</p>
+    <%= f.text_field :nickname %>
 
-<button type="button" class="btn btn-primary">Start quiz</button>
+  <div class="start-quiz">
+    <button type="button" class="btn btn-success">Start quiz</button>
+  </div>
+</div>
 
-<h4>1) How many people currently (2016) live on earth?</h4>
+<div class="question-1">
+  <h4>1) How many people currently (2016) live on earth?</h4>
   <p><%= f.radio_button :q1_points, 0 %> 5,4 billion</p>
   <p><%= f.radio_button :q1_points, 0 %> 6,4 billion</p>
   <p><%= f.radio_button :q1_points, 20 %> 7,4 billion</p>
+</div>
 
-<h4>2) Who got into space first?</h4>
+<div class="question-2">
+  <h4>2) Who got into space first?</h4>
   <p><%= f.radio_button :q2_points, 0 %> Neil Armstrong</p>
   <p><%= f.radio_button :q2_points, 0 %> Laika (the dog)</p>
   <p><%= f.radio_button :q2_points, 20 %> Albert (the monkey)</p>
+</div>
 
-<h4>3) Testvraag</h4>
+<div class="question-3">
+  <h4>3) Testvraag</h4>
   <p><%= f.radio_button :q3_points, 0 %> Antwoord 1</p>
   <p><%= f.radio_button :q3_points, 0 %> Antwoord 2</p>
   <p><%= f.radio_button :q3_points, 20 %> Antwoord 3</p>
+</div>
 
-<h4>4) Testvraag</h4>
+<div class="question-4">
+  <h4>4) Testvraag</h4>
   <p><%= f.radio_button :q4_points, 0 %> Antwoord 1</p>
   <p><%= f.radio_button :q4_points, 0 %> Antwoord 2</p>
   <p><%= f.radio_button :q4_points, 20 %> Antwoord 3</p>
+</div>
 
-<h4>5) Testvraag</h4>
+<div class="question-5">
+  <h4>5) Testvraag</h4>
   <p><%= f.radio_button :q5_points, 0 %> Antwoord 1</p>
   <p><%= f.radio_button :q5_points, 0 %> Antwoord 2</p>
   <p><%= f.radio_button :q5_points, 20 %> Antwoord 3</p>
+</div>
 
-  <%= f.submit %>
-<% end %>
+<div class="submit centered">
+  <h2>Time's Up!</h2>
+    <%= f.submit %>
+  <% end %>
+</div>
 
-<h2>...</h2>
-<h2>Time's Up!</h2>
